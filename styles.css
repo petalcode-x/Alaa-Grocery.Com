@@ -1,0 +1,1855 @@
+/* ===================================
+        GOOGLE FONT
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+        RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    background:#f7f7f7;
+
+}
+
+/* ===================================
+        BROCHURE
+=================================== */
+
+.brochure{
+
+    display: flex;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+}
+
+.brochure::-webkit-scrollbar{
+    display: none;
+}
+
+/* ===================================
+        PAGE
+=================================== */
+
+.page{
+
+    flex:0 0 100vw;
+
+    width:100vw;
+
+    height:100vh;
+
+    padding:40px;
+
+    overflow-y:auto;     /* vertical scrolling */
+
+    overflow-x:hidden;
+
+    scroll-snap-align:start;
+
+    position:relative;
+
+}
+
+/* ===================================
+        COVER
+=================================== */
+
+
+.cover{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0;
+
+}
+
+
+/* Background image */
+
+.cover-image{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    z-index:0;
+
+}
+
+
+/* Dark layer over image */
+
+.cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.40);
+
+    z-index:1;
+
+}
+
+
+/* Text/content */
+
+.cover .overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:35px;
+
+    text-align:center;
+
+    color:white;
+
+    background:rgba(0,0,0,0.20);
+
+    backdrop-filter:blur(5px);
+
+    -webkit-backdrop-filter:blur(5px);
+
+    border-radius:25px;
+
+}
+
+
+/* Main heading */
+
+.cover .overlay h1{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+    font-family: cursive;
+
+}
+
+
+/* Subtitle */
+
+.cover .overlay h3{
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* Description */
+
+.cover .overlay > p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Contact */
+
+.cover-contact{
+
+    margin-top:20px;
+
+}
+
+
+.cover-contact p{
+
+    font-size:17px;
+
+    line-height:1.5;
+
+    margin:7px 0;
+
+}
+
+
+/* Location links */
+
+.location-link{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+.location-link:hover{
+
+    color:#FFD700;
+
+    text-decoration:underline;
+
+}
+
+
+/* Arabic location */
+
+.location-ar{
+
+    direction:rtl;
+
+}
+
+
+.location-ar .location-link{
+
+    color:#FFD700;
+
+}
+
+
+/* WhatsApp */
+
+.whatsapp-link{
+
+    color:#25D366;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+.whatsapp-link:hover{
+
+    color:white;
+
+    text-decoration:underline;
+
+}
+
+
+/* Arabic phone */
+
+.phone-ar{
+
+    direction:rtl;
+
+}
+
+/* ===================================
+        ABOUT
+=================================== */
+
+/* ABOUT PAGE */
+
+.about-page{
+
+    position:relative;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+}
+
+
+/* Background Image */
+
+.about-bg{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:0;
+
+}
+
+
+/* Dark overlay */
+
+.about-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.5);
+
+    z-index:1;
+
+}
+
+
+/* Title and content above image */
+
+.title,
+.about{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.title h2{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:50px;
+
+}
+
+
+.about{
+
+    width:70%;              /* smaller box width */
+
+    max-width:650px;
+
+    margin:30px auto;
+
+    padding:5px;           /* reduce inside space */
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(6px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    border-radius:20px;
+
+}
+
+
+.about p{
+
+    color:white;
+
+    font-size:2px;        /* smaller text */
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+    text-align: center;
+
+}
+
+/* ===================================
+   CELLA GIFT BASKET PAGE
+=================================== */
+
+.cella-page {
+
+    position: relative;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    padding: 35px 25px 100px;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.78),
+            rgba(255,255,255,0.78)
+        ),
+        url("images/cella-background.jfif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ===============================
+   CELLA TITLE
+================================ */
+
+.cella-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.cella-title h1 {
+
+    font-size: 42px;
+
+    color: #287a35;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+    font-family: cursive;
+
+    text-shadow:
+        2px 2px 5px rgba(0,0,0,0.15);
+}
+
+
+.cella-title p {
+
+    font-size: 19px;
+
+    color: #444;
+
+    margin: 8px 0;
+
+}
+
+
+.cella-title .cella-arabic {
+
+    font-size: 20px;
+
+    color: #287a35;
+
+    font-weight: bold;
+
+}
+
+
+/* ===============================
+   CELLA GALLERY
+================================ */
+
+.cella-gallery {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ===============================
+   CELLA CARD
+================================ */
+
+.cella-card {
+
+    background: rgba(255,255,255,0.90);
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    overflow: hidden;
+}
+
+.cella-card p{
+
+  font-weight: bold;
+}
+
+
+/* Hover */
+
+.cella-card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.30);
+}
+
+
+/* ===============================
+   CELLA IMAGE
+================================ */
+
+.cella-card img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 15px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.cella-card:hover img {
+
+    transform: scale(1.05);
+}
+
+
+/* ===============================
+   CELLA TEXT
+================================ */
+
+.cella-card h3 {
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    font-size: 21px;
+
+    color: #287a35;
+}
+
+
+.cella-card p {
+
+    margin: 5px 0 10px;
+
+    font-size: 17px;
+
+    color: #555;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:600px) {
+
+    .cella-page {
+
+        padding: 25px 15px 100px;
+
+    }
+
+
+    .cella-title h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .cella-title p {
+
+        font-size: 16px;
+
+    }
+
+
+    .cella-title .cella-arabic {
+
+        font-size: 17px;
+
+    }
+
+
+    .cella-gallery {
+
+        width: 95%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .cella-card {
+
+        padding: 7px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .cella-card img {
+
+        height: 170px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .cella-card h3 {
+
+        font-size: 15px;
+
+        margin-top: 10px;
+
+    }
+
+
+    .cella-card p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* ===================================
+        BUTTONS
+=================================== */
+
+.navigation{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:300px;
+
+    z-index:9999;
+
+}
+
+.navigation button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:60px;
+
+    background:#157d34;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.navigation button:hover{
+
+    background:#0d5b24;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===================================
+        CATEGORY TITLE
+=================================== */
+
+.category-title{
+
+    font-size:42px;
+
+    color:#157d34;
+
+    text-align:center;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    flex-shrink:0;
+
+}
+
+.category-card{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.category-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    /* 3D effect */
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.25),
+    0 10px 15px rgba(0,0,0,0.15);
+
+    transform:perspective(1000px) rotateX(3deg);
+
+    transition:0.5s ease;
+
+}
+
+
+/* Hover effect */
+
+.category-card img:hover{
+
+    transform:
+    perspective(1000px)
+    rotateX(0deg)
+    translateY(-15px)
+    scale(1.03);
+
+
+    box-shadow:
+    0 35px 60px rgba(0,0,0,0.35);
+
+}
+
+.category-info{
+
+    padding:30px;
+
+    text-align: center;
+
+}
+
+.category-info h3{
+
+    font-size:32px;
+
+    color:#2e7d32;
+
+}
+
+.category-info p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+        PRODUCT GALLERY
+=================================== */
+
+.gallery{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    padding:10px;
+
+}
+
+/* Scrollbar */
+
+.gallery::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.gallery::-webkit-scrollbar-thumb{
+
+    background:#157d34;
+
+    border-radius:20px;
+
+}
+
+
+/* ===================================
+        PRODUCT CARD
+=================================== */
+
+.item{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    height:320px;
+
+}
+
+.item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+
+/* ===================================
+        PRODUCT IMAGE
+=================================== */
+
+.item img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:15px;
+
+    display:block;
+
+    transition:.35s;
+
+}
+
+.item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ===================================
+        PRODUCT NAME
+=================================== */
+
+.item h3{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#157d34;
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+
+/* ===================================
+        IMAGE PLACEHOLDER
+=================================== */
+
+.item img:not([src]),
+
+.item img[src=""]{
+
+    background:#f2f2f2;
+
+    min-height:220px;
+
+}
+
+
+/* ===================================
+        TABLET
+=================================== */
+
+@media(max-width:992px){
+
+.gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.category-title{
+
+    font-size:34px;
+
+}
+
+.item{
+
+    height:300px;
+
+}
+
+.item img{
+
+    height:190px;
+
+}
+
+}
+
+
+/* ===================================
+        MOBILE
+=================================== */
+
+@media(max-width:600px){
+
+    .cover{
+
+        min-height:100vh;
+
+    }
+
+
+    .cover-image{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+    }
+
+
+    .cover .overlay{
+
+        width:92%;
+
+        padding:22px 15px;
+
+    }
+
+
+    .cover .overlay h1{
+
+        font-size:38px;
+
+    }
+
+
+    .cover .overlay h3{
+
+        font-size:19px;
+
+    }
+
+
+    .cover .overlay > p{
+
+        font-size:14px;
+
+        line-height:1.5;
+
+    }
+
+
+    .cover-contact{
+
+        margin-top:15px;
+
+    }
+
+
+    .cover-contact p{
+
+        font-size:13px;
+
+        line-height:1.5;
+
+        margin:5px 0;
+
+    }
+
+}
+
+/* ===================================
+        DELIVERY PAGE
+=================================== */
+
+.delivery{
+
+    background:linear-gradient(135deg,#157d34,#2db84d);
+
+    color:#fff;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.delivery-content{
+
+    width:100%;
+
+    max-width:1200px;
+
+    text-align:center;
+
+}
+
+.delivery-content h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.delivery-content p{
+
+    font-size:24px;
+
+    margin-bottom:50px;
+
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.feature{
+
+    background:#fff;
+
+    color:#157d34;
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature{
+
+    font-size:45px;
+
+}
+
+.feature h3{
+
+    font-size:20px;
+
+    margin-top:15px;
+
+    font-weight:600;
+
+}
+
+
+/* ===================================
+        CONTACT PAGE
+=================================== */
+
+/* ONLY CONTACT PAGE */
+
+.last-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    height:auto !important;
+
+    padding:40px 20px 120px;
+
+    overflow:hidden !important;
+
+}
+
+.last-page .contact-box h1{
+
+  text-align: center;
+
+  color: #f0f3f1;
+
+  font-family: cursive;
+
+}
+
+.last-page .contact-box h5{
+
+  text-align: center;
+
+  font-family: cursive;
+
+}
+
+
+/* Background image */
+
+.last-page .contact-bg{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:0;
+
+}
+
+
+
+/* Dark layer */
+
+.last-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.35);
+
+    z-index:1;
+
+}
+
+
+
+/* Keep blur box above image */
+
+.last-page .contact-overlay{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+/* Blur glass section */
+
+.last-page .contact-box{
+
+
+    width:100%;
+
+    max-width:700px;
+
+
+    padding:20px;
+
+
+    background:rgba(255,255,255,0.20);
+
+
+    backdrop-filter:blur(2px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+
+    border-radius:30px;
+
+
+    color:white;
+
+
+    margin-top:20px;
+
+
+}
+
+
+.location-text a{
+
+  font-family: cursive;
+
+  text-decoration:none;
+
+  font-family: cursive;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  color: rgb(58, 3, 80);
+
+
+}
+
+.arabic-location{
+
+    color: rgb(58, 3, 80);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    direction:rtl;
+
+    text-align:center;
+
+    margin-top:10px;
+
+}
+
+
+/* Only last page scrolling */
+
+.last-page{
+
+    height:auto !important;
+
+    min-height:100vh;
+
+    overflow-y:auto !important;
+
+    padding-bottom:120px;
+
+}
+
+
+/* allow content to scroll */
+
+.last-page .contact-overlay{
+
+    height:auto;
+
+}
+
+
+.last-page .contact-box{
+
+    margin-top:30px;
+
+    margin-bottom:80px;
+
+}
+
+
+/* ===================================
+        TABLET RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+.features{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.delivery-content h1{
+
+    font-size:42px;
+
+}
+
+.delivery-content p{
+
+    font-size:20px;
+
+}
+
+.contact-box{
+
+    padding:40px;
+
+}
+
+.contact-box h1{
+
+    font-size:38px;
+
+}
+
+}
+
+
+/* ===================================
+        MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:600px){
+
+.page{
+
+    padding:20px;
+
+}
+
+.overlay h1{
+
+    font-size:42px;
+
+}
+
+.overlay h3{
+
+    font-size:22px;
+
+}
+
+.overlay p{
+
+    font-size:16px;
+
+}
+
+.title h2{
+
+    font-size:34px;
+
+}
+
+.about p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+.feature{
+
+    padding:25px;
+
+}
+
+.contact-box{
+
+    padding:25px;
+
+}
+
+.contact-box h1{
+
+    font-size:30px;
+
+}
+
+.contact-box p{
+
+    font-size:16px;
+
+}
+
+.navigation{
+
+    bottom:15px;
+
+}
+
+.navigation button{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+}
+
+}
+
+.contact-page{
+
+    height:auto !important;
+
+    min-height:100vh;
+
+    padding:40px 20px 120px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+
+
+/* keep image full only for contact page */
+
+.contact-page .contact-bg{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:100%;
+
+    object-fit:cover;
+
+    top:0;
+
+    left:0;
+
+}
+
+
+
+/* move glass box down */
+
+.contact-page .contact-overlay{
+
+    width:100%;
+
+    margin-top:20px;
+
+}
+
+
+
+/* glass box */
+
+.contact-page .contact-box{
+
+    width:100%;
+
+    padding:25px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* reduce bottom text size */
+
+.contact-page .contact-box h2{
+
+    font-size:25px;
+
+}
+
+
+
+.contact-page .contact-box p{
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+
+
+/* ===================================
+        SMOOTH SCROLL
+=================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ===================================
+        PAGE ANIMATION
+=================================== */
+
+.page{
+
+    animation:fadeIn .6s ease-in-out;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===================================
+        IMAGE HOVER
+=================================== */
+
+.item{
+
+    cursor:pointer;
+
+}
+
+.item img{
+
+    transition:transform .4s ease;
+
+}
+
+.item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===================================
+        CARD SHADOW
+=================================== */
+
+.item{
+
+    border:1px solid #e8e8e8;
+
+}
+
+.item:hover{
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* ===================================
+        COVER TEXT ANIMATION
+=================================== */
+
+.overlay h1{
+
+    animation:slideDown 1s;
+
+}
+
+.overlay h3{
+
+    animation:slideUp 1.2s;
+
+}
+
+.overlay p{
+
+    animation:fadeText 1.5s;
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeText{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===================================
+        BUTTON EFFECT
+=================================== */
+
+.navigation button{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.navigation button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===================================
+        IMAGE LOADING
+=================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ===================================
+        SELECTION COLOR
+=================================== */
+
+::selection{
+
+    background:#157d34;
+
+    color:white;
+
+}
+
+/* ===================================
+        FOOTER SPACING
+=================================== */
+
+.contact-box{
+
+    margin:auto;
+
+}
+
+/* ===================================
+        EXTRA SMALL DEVICES
+=================================== */
+
+@media(max-width:600px){
+
+.contact-box{
+
+    width:90%;
+
+    padding:20px;
+
+    transform:translateY(-20px);
+
+}
+
+
+.contact-box h1{
+
+    font-size:32px;
+
+}
+
+
+.contact-box h3{
+
+    font-size:18px;
+
+}
+
+
+.contact-box p{
+
+    font-size:15px;
+
+}
+
+
+.contact-box h2{
+
+    font-size:24px;
+
+}
+
+}
