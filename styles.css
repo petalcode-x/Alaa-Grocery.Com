@@ -187,6 +187,12 @@ body{
 
 }
 
+.phone-en a,
+.phone-ar a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* Subtitle */
 
